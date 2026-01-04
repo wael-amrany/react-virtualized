@@ -145,7 +145,7 @@ export default function createDetectElementResize(nonce, hostWindow) {
           (animationKeyframes ? animationKeyframes : '') +
           '.resize-triggers { ' +
           (animationStyle ? animationStyle : '') +
-          'visibility: hidden; opacity: 0; } ' +
+          'visibility: hidden; opacity: 0;  direction: ltr; writing-mode: horizontal-tb; } ' +
           '.resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; z-index: -1; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }',
         head = doc.head || doc.getElementsByTagName('head')[0],
         style = doc.createElement('style');
